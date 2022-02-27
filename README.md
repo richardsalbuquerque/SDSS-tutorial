@@ -43,17 +43,6 @@ With the above command lines, you will select right ascension and declination da
 which have spectroscopy data and are located on right ascension between 130° and 145° with redshift
 less than 0.05 and they are galaxy.
 
-
-
-
-
-
-
-
-
-
-
-################
 # SDSS-tutorial (Português)
 
 ## Visão geral
@@ -94,7 +83,7 @@ FROM specObj
 
 O terceiro, WHERE, adicionará restrições à seleção das características exatas do objeto que você deseja, por exemplo:
 
-ONDE ra ENTRE 130 E 145 E z < 0,05 E objType='GALAXY'
+WHERE ra BETWEEN 130 AND 145 AND z < 0,05 AND objType='GALAXY'
 
 Com a linhas de comandos acima, você selecionarará dados de ascensão reta e declinação de objetos
 que possuem dados de espectroscopia e estão localizados na ascensão reta entre 130° e 145° com redshift 
