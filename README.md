@@ -1,19 +1,18 @@
 # SDSS-tutorial (English)
 
 ## Overview
-There are over a milion of astronomical objects in the Sloan Digital Sky Survey (SDSS) database, 
-by asking the right question you will be able to select the exatly the object you want, for example:
+There are over a million of astronomical objects in the Sloan Digital Sky Survey (SDSS) database, 
+by asking the right question you will be able to select the exactly the object you want, for example:
 the brightest, less bright or the furthest, all in seconds.
 
-You need to writte a query to get information in database, but be carefull! The wrong query can
-return Gigabytes of information, you will need to learn about the SQL language to get information
-from SDSS, this is a common language for working with data.
+You need to write a query to get information in the database, but be carefull! The wrong query can
+return Gigabytes of information, you will need to learn about the SQL language to get information from SDSS, this is a common language for working with data.
 
 ## Importants information
 
 First, I want to talk about some parameters that we will use to code the algorithm that searches
-for the filamentary structure. Definetively, the redshift is one of the most important parameters,
-as it gives the imformation about how far away we are. The redshift of a spectrum is in the 'z'
+for the filamentary structure. Definitely, the redshift is one of the most important parameters,
+as it gives the information about how far away we are. The redshift of a spectrum is in the 'z'
 column of the specObj table, we need to save it to write the query.
 
 This job is looking for galaxy to make a density profile, so we need to specify the type of
@@ -48,26 +47,25 @@ less than 0.05 and they are galaxy.
 ## Visão geral
 Existem mais de um milhão de objetos astronômicos na base de dados do Sloan digital Sky Survey (SDSS),
 fazendo a pergunta certa você poderá encontrar o exato objeto requerido, por exemplo: o mais brilhante,
-menos brilhante ou até mesmo o mais distânte, tudo isso em questão de segundos.
+menos brilhante ou até mesmo o mais distante, tudo isso em questão de segundos.
 
 Você precisará escrever uma "query" para obter informações do banco de dados, tome cuidado! A "query"
 errada pode retornar um arquivo de Gigabytes de tamanho, você precisará aprender algumas técnicas da
-linguagem SQL para trabalhar com esses dados, esta é uma ferramenta comun quando estamos estudando
+linguagem SQL para trabalhar com esses dados, esta é uma ferramenta comum quando estamos estudando
 grandes quantidades de dados.
 
 ## Informações importantes
 
-Primeiramente, quero destacar alguns parâmetros essenciais para o algorítimo de busca das estruturas
-filamentares do universo. Definitivamente, o redshift é um dos mais importante, pois nos da a informação
-do quão longe estamos procurando.
+Primeiramente, quero destacar alguns parâmetros essenciais para o algoritmo de busca das estruturas
+filamentares do universo. Definitivamente, o redshift é um dos mais importante, pois nos dá a informação do quão longe estamos procurando.
 
 Este trabalho objetiva pegar dados de galáxias para fazer um perfil de densidade de um filamento. Dessa forma,
-na tabela specObj pegaremos a coluna objType e selecionaremos dados de GALAXY que recebem o valor '0'
+na tabela specObj pegamos a coluna objType e selecionaremos dados de GALAXY que recebem o valor '0'
 (URL da documentação: http://skyserver.sdss.org/dr8/en/help/browser/browser.asp).
 
 A ferramenta de consulta do SkyServer é limitada a 90 segundos de tempo de pesquisa e 100.000 resultados. 
 Se você quiser escrever consultas que retornem mais de 100.000 objetos, você precisa ser esperto:
-divida sua consulta em várias partes.
+divide sua consulta em várias partes.
 
 ## Mais sobre comandos SQL
 
@@ -81,11 +79,11 @@ O segundo bloco, FROM, vai buscar as informações especificadas na parte seleci
 
 FROM specObj
 
-O terceiro, WHERE, adicionará restrições à seleção das características exatas do objeto que você deseja, por exemplo:
+O terceiro, WHERE, adiciona restrições à seleção das características exatas do objeto que você deseja, por exemplo:
 
 WHERE ra BETWEEN 130 AND 145 AND z < 0,05 AND objType='GALAXY'
 
-Com a linhas de comandos acima, você selecionarará dados de ascensão reta e declinação de objetos
+Com a linhas de comandos acima, você selecionará dados de ascensão reta e declinação de objetos
 que possuem dados de espectroscopia e estão localizados na ascensão reta entre 130° e 145° com redshift 
 menor que 0,05 e são galáxias.
 
